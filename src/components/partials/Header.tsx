@@ -1,10 +1,14 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useSession } from "next-auth/react";
-
 
 import useScroll from "@/lib/hooks/use-scroll";
 import { useSignInModal } from "./SignInModal";
-import UserDropdown from "./UserDropdown";
+
+const UserDropdown = dynamic(() => import('./UserDropdown'), {
+    ssr: false
+});
+
 
 
 const Header = () => {

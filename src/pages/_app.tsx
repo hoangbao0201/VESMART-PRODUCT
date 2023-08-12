@@ -7,6 +7,7 @@ import { SessionProvider } from "next-auth/react";
 import "@/styles/globals.css";
 import 'tippy.js/dist/tippy.css';
 import "tippy.js/themes/light-border.css";
+import ScrollOnTop from "@/components/share/ScrollOnTop";
 
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -22,8 +23,11 @@ export default function App({ Component, pageProps: { session, ...pageProps } }:
     const getLayout = Component.getLayout || ((page) => page);
 
     return (
-        <SessionProvider session={session}>
-            {getLayout(<Component {...pageProps} />)}
-        </SessionProvider>
+        <>
+            <SessionProvider session={session}>
+                {getLayout(<Component {...pageProps} />)}
+            </SessionProvider>
+            <ScrollOnTop />
+        </>
     )
 }
