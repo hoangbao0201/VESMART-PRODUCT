@@ -15,7 +15,7 @@ const UserDropdown = ({ session }: { session: Session }) => {
 
     return (
         <div className="relative inline-block text-left">
-            <Tippy
+            {/* <Tippy
                 trigger="click"
                 duration={100}
                 theme="light-border"
@@ -40,7 +40,7 @@ const UserDropdown = ({ session }: { session: Session }) => {
                         </button>
                     </div>
                 }
-            >
+            > */}
                 <button
                     onClick={() => setOpenPopover(!openPopover)}
                     className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-gray-300 transition-all duration-75 focus:outline-none active:scale-105 sm:h-9 sm:w-9"
@@ -55,7 +55,7 @@ const UserDropdown = ({ session }: { session: Session }) => {
                         height={40}
                     />
                 </button>
-            </Tippy>
+            {/* </Tippy> */}
         </div>
     );
 }

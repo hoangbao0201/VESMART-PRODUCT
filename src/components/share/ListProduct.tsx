@@ -9,10 +9,10 @@ const ListProduct = () => {
                 {
                     [1,2,3,4,5,6,7,8,9,10,11,12].map(product => {
                         return (
-                            <li key={product} className="bg-white border hover:shadow-md">
-                                <Link href={`/`}>
+                            <li key={product} className="bg-white border hover:shadow-md group">
+                                <Link href={`/san-pham/${product}`}>
                                     <article>
-                                        <div className="w-full sm:h-56 h-48 bg-gray-100 overflow-hidden">
+                                        <div className="relative w-full sm:h-56 h-48 bg-gray-100 overflow-hidden">
                                             <Image
                                                 width={300}
                                                 height={300}
@@ -20,6 +20,7 @@ const ListProduct = () => {
                                                 src="https://image.folderstyle.com/data/folderstyle_data/images/product/00/00/05/76/74/b_0000057674.gif?w=243&f=webp"
                                                 className="h-48 w-full object-cover"
                                             />
+                                            <div className="absolute px-2 py-1 w-full bg-black/60 text-white/80 group-hover:bottom-0 -bottom-60 transition-all ease-out">HELLO</div>
                                         </div>
                                         <div className="px-2 py-2 [&>div]:mb-2">
                                             <div>
