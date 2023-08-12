@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image"
-import { signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 
 import useScroll from "@/lib/hooks/use-scroll";
@@ -14,13 +13,12 @@ const Header = () => {
     const { SignInModal, setIsShowModal } = useSignInModal();
     const scrolled = useScroll(50);
 
-    console.log(session);
+    console.log(status);
 
     return (
         <>
             <SignInModal />
-            <header className={`fixed w-full z-30 top-0 transition-all flex justify-center ${scrolled ? 'border-b border-gray-200 bg-white/50 backdrop-blur-xl' : 'bg-white/0'}
-            `}>
+            <header className={`fixed w-full z-30 top-0 transition-all flex justify-center ${scrolled ? 'border-b border-gray-200 bg-white/50 backdrop-blur-xl' : 'bg-white/0'}`}>
                 <div className="max-w-screen-xl w-full h-16 mx-4 flex items-center">
     
                     <div>
