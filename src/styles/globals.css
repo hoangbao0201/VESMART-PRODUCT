@@ -16,5 +16,14 @@
 
 body {
     color: rgb(var(--foreground-rgb));
-    background: rgb(var(--background-page));
+    /* background: rgb(var(--background-page)); */
+    
+    
+    background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+    --tw-gradient-from: #eef2ff var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(238 242 255 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    --tw-gradient-to: rgb(255 255 255 / 0)  var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), #fff var(--tw-gradient-via-position), var(--tw-gradient-to);
+    --tw-gradient-to: #cffafe var(--tw-gradient-to-position);
 }
