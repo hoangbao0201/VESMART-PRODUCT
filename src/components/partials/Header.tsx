@@ -29,7 +29,7 @@ const Header = () => {
     
                     <div className="ml-auto">
                         {
-                            session ? (
+                            status === "authenticated" ? (
                                 <UserDropdown session={session}/>
                             ) : (
                                 <button
