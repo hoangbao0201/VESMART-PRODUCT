@@ -13,7 +13,7 @@ const Header = () => {
     const { SignInModal, setIsShowModal } = useSignInModal();
     const scrolled = useScroll(50);
 
-    console.log(status);
+    // console.log(status);
 
     return (
         <>

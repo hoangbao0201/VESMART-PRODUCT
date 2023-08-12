@@ -1,4 +1,3 @@
-"use client";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -8,7 +7,7 @@ import { signOut } from "next-auth/react";
 import Tippy from "@tippyjs/react";
 import { IconDashboard, IconLogout } from "../../../public/icons";
 
-export default function UserDropdown({ session }: { session: Session }) {
+const UserDropdown = ({ session }: { session: Session }) => {
     const { email, image } = session?.user || {};
     const [openPopover, setOpenPopover] = useState(false);
 
@@ -60,3 +59,5 @@ export default function UserDropdown({ session }: { session: Session }) {
         </div>
     );
 }
+
+export default UserDropdown;
