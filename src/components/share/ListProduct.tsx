@@ -17,7 +17,7 @@ const ListProduct = () => {
                                                 width={300}
                                                 height={300}
                                                 alt="Ảnh sản phẩm"
-                                                src="https://image.folderstyle.com/data/folderstyle_data/images/product/00/00/05/76/74/b_0000057674.gif?w=243&f=webp"
+                                                src="https://res.cloudinary.com/djrbd6ftt/image/upload/v1691908194/VESMART-PRODUCT/TEST/cfe53e7efe73247d478aaae7414127e7.jpg_720x720q80_ixybi2.jpg"
                                                 className="h-48 w-full object-cover"
                                             />
                                             <div className="absolute px-2 py-1 w-full bg-black/60 text-white/80 group-hover:bottom-0 -bottom-60 transition-all ease-out">HELLO</div>

@@ -42,7 +42,7 @@ const UserDropdown = ({ session }: { session: Session }) => {
             >
                 <button
                     onClick={() => setOpenPopover(!openPopover)}
-                    className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-gray-300 transition-all duration-75 focus:outline-none active:scale-105 sm:h-9 sm:w-9"
+                    className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-gray-300 transition-all duration-75 focus:outline-none active:scale-105 sm:h-9 sm:w-9"
                 >
                     <Image
                         alt={email}
@@ -50,8 +50,8 @@ const UserDropdown = ({ session }: { session: Session }) => {
                             image ||
                             `https://avatars.dicebear.com/api/micah/${email}.svg`
                         }
-                        width={40}
-                        height={40}
+                        width={45}
+                        height={45}
                     />
                 </button>
             </Tippy>

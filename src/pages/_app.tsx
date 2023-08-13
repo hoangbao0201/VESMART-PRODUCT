@@ -9,6 +9,16 @@ import 'tippy.js/dist/tippy.css';
 import "tippy.js/themes/light-border.css";
 import ScrollOnTop from "@/components/share/ScrollOnTop";
 
+import "nprogress/nprogress.css";
+import NProgress from "nprogress";
+import { Router } from "next/router";
+
+//Binding events.
+Router.events.on("routeChangeStart", () => NProgress.start());
+Router.events.on("routeChangeComplete", () => NProgress.done());
+Router.events.on("routeChangeError", () => NProgress.done());
+NProgress.configure({ showSpinner: false });
+
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
     getLayout?: (page: ReactElement) => ReactNode;
